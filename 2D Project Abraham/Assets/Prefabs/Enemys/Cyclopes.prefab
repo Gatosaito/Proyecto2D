@@ -187,7 +187,9 @@ MonoBehaviour:
   Velocidad_Movimiento: 2
   Puntos_Movimiento:
   - {fileID: 4381429952055714997}
-  Distancia_Minima: 1
+  Puntos_Movimiento2:
+  - {fileID: 4982236870120521242, guid: 61ccf66d060d99242afe313c97ba391f, type: 3}
+  Distancia_Minima: 0
   spriterenderer: {fileID: 0}
 --- !u!114 &-4936621652631595961
 MonoBehaviour:

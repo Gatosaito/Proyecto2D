@@ -47,3 +47,6 @@ TagManager:
   - name: Encima
     uniqueID: 3977364239
     locked: 0
+  - name: Vidas
+    uniqueID: 3671175783
+    locked: 0

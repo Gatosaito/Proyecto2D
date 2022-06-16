@@ -122,10 +122,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Velocidad_Movimiento: 6
   Puntos_Movimiento:
-  - {fileID: 7928813969696429111, guid: e6ce5068d7e50ba499a71b5f28ec0253, type: 3}
-  - {fileID: 3986644456536301110, guid: 313172369d328fa4d82bd0ac9b1be240, type: 3}
-  - {fileID: 7246201426241901604, guid: ae5915294df6e674295c919797198598, type: 3}
-  - {fileID: 5098550516743052889, guid: 7c719b06030ba7b4eb319bf7ca03d424, type: 3}
+  - {fileID: 3832018983821304886, guid: f5d0b3436283c714c9c25852698fcf81, type: 3}
+  - {fileID: 2668279964733574762, guid: 0901e03878e73a147b0ecfdf32e895c8, type: 3}
+  - {fileID: 8010957962785351099, guid: e44876485aefdbd4f8295e328951296d, type: 3}
+  Puntos_Movimiento2:
+  - {fileID: 5407261009162667235, guid: f742c416e05b4674dbca8f9fd6840823, type: 3}
+  - {fileID: 4765560244981939593, guid: 604a3559ca12f7643aa28be436bf6ea7, type: 3}
+  - {fileID: 6766247507736578811, guid: 2e8889386d0936341870a655676f98d8, type: 3}
   Distancia_Minima: 0.2
   spriterenderer: {fileID: 923588353888467091}
 --- !u!114 &6551582375267639217
