@@ -22,7 +22,6 @@ public class Enemy_controller : MonoBehaviour
         numero_aleatorio = Random.Range(1, 3);
 
         spriterenderer = GetComponent<SpriteRenderer>();
-        Girar();
     }
 
     private void Update()
@@ -37,11 +36,6 @@ public class Enemy_controller : MonoBehaviour
             if (Vector2.Distance(transform.position, Puntos_Movimiento[Siguiente_Paso].position) < Distancia_Minima)
             {
                 Siguiente_Paso += 1;
-                if (Siguiente_Paso >= Puntos_Movimiento.Length)
-                {
-                    Girar();
-                    Destroy(gameObject);
-                }
             }
         }
         else
@@ -52,25 +46,28 @@ public class Enemy_controller : MonoBehaviour
             if (Vector2.Distance(transform.position, Puntos_Movimiento2[Siguiente_Paso].position) < Distancia_Minima)
             {
                 Siguiente_Paso += 1;
-                if (Siguiente_Paso >= Puntos_Movimiento2.Length)
-                {
-                    Girar();
-                    Destroy(gameObject);
-                }
             }
         }
 
     }
 
-    private void Girar() 
-    {
-        if (transform.position.x < Puntos_Movimiento[Siguiente_Paso].position.x)
-        {
-            spriterenderer.flipX = true;
-        }
-        else
-        {
-            spriterenderer.flipX = false;
-        }
-    }
+    /* private void Girar() 
+     {
+         if (transform.position.x < Puntos_Movimiento[Siguiente_Paso].position.x)
+         {
+             spriterenderer.flipX = true;
+         }
+         else
+         {
+             spriterenderer.flipX = false;
+         }
+
+
+                 if (Siguiente_Paso >= Puntos_Movimiento.Length)
+                 {
+                     Destroy(gameObject);
+                 }
+
+
+     }*/
 }

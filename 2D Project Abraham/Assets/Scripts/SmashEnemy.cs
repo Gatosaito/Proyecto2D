@@ -10,6 +10,6 @@ public class SmashEnemy: MonoBehaviour
     }
     public void OnMouseDown()
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
