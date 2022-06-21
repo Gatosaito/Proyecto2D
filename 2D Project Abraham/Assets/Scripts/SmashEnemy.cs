@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class SmashEnemy: MonoBehaviour
 {
-    private void Start()
-    {
-        
-    }
+    public int vidas_enemigo;
+
     public void OnMouseDown()
     {
-        Destroy(gameObject);
+        vidas_enemigo--;
+
+        if (vidas_enemigo == 0)
+        {
+            Destroy(gameObject);
+        }
+        
     }
 }
