@@ -12,11 +12,27 @@ public class Spawn_monster : MonoBehaviour
     public GameObject[] Enemys;
 
     public float time_spawn;
-    public float repeat_spawnrate = 3;
+    public float repeat_spawnrate = 5;
+
+    private float Cronometro = 0f;
+    private float Curva = 180f;
 
     private void Start()
     {
         InvokeRepeating("SpawnEnemys", time_spawn, repeat_spawnrate);
+    }
+
+    private void Update()
+    {
+        Cronometro += Time.deltaTime;
+
+        if (Cronometro >= Curva)
+        {
+            repeat_spawnrate--;
+            time_spawn--;
+
+            Cronometro = 0;
+        }
     }
 
     public void SpawnEnemys() 

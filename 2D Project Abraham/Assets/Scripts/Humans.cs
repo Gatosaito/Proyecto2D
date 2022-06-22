@@ -6,7 +6,9 @@ public class Humans : MonoBehaviour
 {
     public int vidas_humanos;
     public Player_Stadictics player;
-
+    public Enemy_controller velocidad;
+    public Animator Animacion;
+    
 
     private void Start()
     {
@@ -20,10 +22,18 @@ public class Humans : MonoBehaviour
 
         if (vidas_humanos == 0)
         {
-            Destroy(gameObject);
+            velocidad.Velocidad_Movimiento = 0;
+
+            Animacion.SetBool("IsDeath", true);
+
             player.Vidas--;
             player.UpdateVidas();   
         }
         
+    }
+
+    public void MyOnDestroy()
+    {
+        Destroy(gameObject);
     }
 }
