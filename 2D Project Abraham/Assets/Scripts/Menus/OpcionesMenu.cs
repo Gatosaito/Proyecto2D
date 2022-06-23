@@ -1,0 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+
+public class OpcionesMenu : MonoBehaviour
+{
+    public void EscenaOpciones()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+}

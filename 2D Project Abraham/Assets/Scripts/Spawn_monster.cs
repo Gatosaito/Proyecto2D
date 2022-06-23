@@ -12,18 +12,24 @@ public class Spawn_monster : MonoBehaviour
     public GameObject[] Enemys;
 
     public float time_spawn;
-    public float repeat_spawnrate = 5;
+    public float repeat_spawnrate;
 
-    private float Cronometro = 0f;
-    private float Curva = 180f;
+    public float Cronometro = 0f;
+    private float Curva = 120f;
+
+  
+
 
     private void Start()
     {
         InvokeRepeating("SpawnEnemys", time_spawn, repeat_spawnrate);
+
+
     }
 
     private void Update()
     {
+        
         Cronometro += Time.deltaTime;
 
         if (Cronometro >= Curva)
@@ -32,6 +38,8 @@ public class Spawn_monster : MonoBehaviour
             time_spawn--;
 
             Cronometro = 0;
+
+            InvokeRepeating("SpawnEnemys", time_spawn, repeat_spawnrate);
         }
     }
 
@@ -43,4 +51,7 @@ public class Spawn_monster : MonoBehaviour
 
         GameObject enemy = Instantiate(Enemys[Random.Range(0, Enemys.Length)], spawnposition, gameObject.transform.rotation);
     }
+
+    
+
 }
