@@ -51,17 +51,6 @@ public class MenuPausa : MonoBehaviour
         menu_pausa.SetActive(false);
     }
 
-    public void Reiniciar()
-    {
-        juego_pausado = false;
-
-        Time.timeScale = 1f;
-        relog.ResetTimer();
-
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     public void Salir() 
     {
         Application.Quit();

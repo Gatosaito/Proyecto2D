@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Zona_Deteccion : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class Zona_Deteccion : MonoBehaviour
 
             if (Player_stadistic.Vidas == 0)
             {
-                Debug.Log("Perdiste mamahuevo");
+                SceneLose();
             }
         }
         if (other.tag == "Humano")
@@ -31,5 +32,12 @@ public class Zona_Deteccion : MonoBehaviour
 
 
         Player_stadistic.UpdateVidas();
+    }
+
+    public void SceneLose() 
+    {
+
+            SceneManager.LoadScene("GameOver");
+
     }
 }

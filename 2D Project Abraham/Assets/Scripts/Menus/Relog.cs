@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Relog : MonoBehaviour
 {
@@ -35,7 +36,6 @@ public class Relog : MonoBehaviour
             tiempoAMostrarEnSegundos += tiempoDelFrameConTimeScale;
             ActualizarRelog(tiempoAMostrarEnSegundos);
         }
-        
     }
 
     public void ActualizarRelog(float tiempoEnSegundos)
@@ -73,12 +73,5 @@ public class Relog : MonoBehaviour
             estaPausado = false;
             time_scale = escalaDeTiempoAlPausar;
         }
-    }
-
-    public void ResetTimer() 
-    {
-        estaPausado = false;
-        time_scale = escalaDeTiempoInicial;
-        ActualizarRelog(tiempoAMostrarEnSegundos);
     }
 }

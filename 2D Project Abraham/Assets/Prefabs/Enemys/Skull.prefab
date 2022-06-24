@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d0c6599d6d60a45b711b4bc71d6e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Velocidad_Movimiento: 6
+  Velocidad_Movimiento: 2
   Puntos_Movimiento:
   - {fileID: 3832018983821304886, guid: f5d0b3436283c714c9c25852698fcf81, type: 3}
   - {fileID: 2668279964733574762, guid: 0901e03878e73a147b0ecfdf32e895c8, type: 3}

@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d0c6599d6d60a45b711b4bc71d6e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Velocidad_Movimiento: 2
+  Velocidad_Movimiento: 1
   Puntos_Movimiento:
   - {fileID: 5304062334063655665}
   Puntos_Movimiento2:

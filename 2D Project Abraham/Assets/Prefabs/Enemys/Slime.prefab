@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d0c6599d6d60a45b711b4bc71d6e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Velocidad_Movimiento: 8.5
+  Velocidad_Movimiento: 2.5
   Puntos_Movimiento:
   - {fileID: 2756123042388079476, guid: 08974095fe2f52c4995850fc3347051e, type: 3}
   - {fileID: 5287268726614336838, guid: b75a36f6711b57640b11687394ad7e42, type: 3}

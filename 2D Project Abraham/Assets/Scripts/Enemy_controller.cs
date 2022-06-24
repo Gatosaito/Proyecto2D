@@ -51,6 +51,11 @@ public class Enemy_controller : MonoBehaviour
 
     }
 
+    public void SetSpeedMovment(float speed)
+    {
+        Velocidad_Movimiento += speed;
+    }
+
     /* private void Girar() 
      {
          if (transform.position.x < Puntos_Movimiento[Siguiente_Paso].position.x)

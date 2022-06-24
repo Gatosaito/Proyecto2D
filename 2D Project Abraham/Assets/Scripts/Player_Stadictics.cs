@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Player_Stadictics : MonoBehaviour
 {
     public int Vidas = 3;
