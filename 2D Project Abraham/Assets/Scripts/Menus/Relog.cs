@@ -53,6 +53,11 @@ public class Relog : MonoBehaviour
 
         my_text.text = textoDelRelog;
 
+        if (minutos <= 0 && segundos <= 0)
+        {
+            WinScene();
+        }
+
     }
 
     public void Pausar()
@@ -73,5 +78,9 @@ public class Relog : MonoBehaviour
             estaPausado = false;
             time_scale = escalaDeTiempoAlPausar;
         }
+    }
+    public void WinScene()
+    {
+            SceneManager.LoadScene("Win");
     }
 }

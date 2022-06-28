@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6f1a86c52f317429815de0a55dc750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidas_enemigo: 1
+  vidas_enemigo: 2
   Animacion: {fileID: 5578101539374778159}
   velocidad: {fileID: 2136564648252054575}
   sonido_muerte: {fileID: 4980116728860336595}

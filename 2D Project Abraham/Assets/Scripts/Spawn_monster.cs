@@ -20,8 +20,10 @@ public class Spawn_monster : MonoBehaviour
     private float Curva = 10;
     public float tiempo = 360;
 
-   float cantidad = 0.5f;
+   float cantidad = 1f;
     public float velocidadMovimiento;
+
+    
 
   
 
@@ -45,11 +47,11 @@ public class Spawn_monster : MonoBehaviour
 
             
             SpawnEnemys(cantidad);
-            cantidad += 0.5f;
+            cantidad += 0.2f;
             
         }
         tiempo-= 1 * Time.deltaTime;
-        if (tiempo == 0)
+        if (tiempo <= 0)
         {
             WinScene();
         }
@@ -58,7 +60,7 @@ public class Spawn_monster : MonoBehaviour
     public void SpawnEnemys(float cantidad) 
     {
         Vector3 spawnposition = new Vector3(0, 0, 0);
-        velocidadMovimiento += 0.2f;
+        velocidadMovimiento += 0.1f;
 
         for (int i = 0; i < cantidad; i++)
         {
@@ -70,8 +72,13 @@ public class Spawn_monster : MonoBehaviour
 
     }
 
+    private int contador = 0 ;
     public void WinScene()
     {
-        SceneManager.LoadScene("Win");
+        if (contador == 0)
+        {
+            SceneManager.LoadScene("Win");
+            contador++;
+        }
     }
 }

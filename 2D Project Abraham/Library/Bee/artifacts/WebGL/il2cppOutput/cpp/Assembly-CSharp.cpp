@@ -8483,9 +8483,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spawn_monster_Update_m3C3F0F2403927A0DDE
 		// SpawnEnemys(cantidad);
 		float L_4 = __this->___cantidad_15;
 		Spawn_monster_SpawnEnemys_mEA4EB7FFDEC6E9863144602819EA491FA41265A5(__this, L_4, NULL);
-		// cantidad += 0.5f;
+		// cantidad += 0.2f;
 		float L_5 = __this->___cantidad_15;
-		__this->___cantidad_15 = ((float)il2cpp_codegen_add(L_5, (0.5f)));
+		__this->___cantidad_15 = ((float)il2cpp_codegen_add(L_5, (0.200000003f)));
 	}
 
 IL_0049:
@@ -8495,9 +8495,9 @@ IL_0049:
 		float L_7;
 		L_7 = Time_get_deltaTime_m7AB6BFA101D83E1D8F2EF3D5A128AEE9DDBF1A6D(NULL);
 		__this->___tiempo_14 = ((float)il2cpp_codegen_subtract(L_6, ((float)il2cpp_codegen_multiply((1.0f), L_7))));
-		// if (tiempo == 0)
+		// if (tiempo <= 0)
 		float L_8 = __this->___tiempo_14;
-		if ((!(((float)L_8) == ((float)(0.0f)))))
+		if ((!(((float)L_8) <= ((float)(0.0f)))))
 		{
 			goto IL_0074;
 		}
@@ -8530,9 +8530,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spawn_monster_SpawnEnemys_mEA4EB7FFDEC6E
 	{
 		// Vector3 spawnposition = new Vector3(0, 0, 0);
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_0), (0.0f), (0.0f), (0.0f), NULL);
-		// velocidadMovimiento += 0.2f;
+		// velocidadMovimiento += 0.1f;
 		float L_0 = __this->___velocidadMovimiento_16;
-		__this->___velocidadMovimiento_16 = ((float)il2cpp_codegen_add(L_0, (0.200000003f)));
+		__this->___velocidadMovimiento_16 = ((float)il2cpp_codegen_add(L_0, (0.100000001f)));
 		// for (int i = 0; i < cantidad; i++)
 		V_1 = 0;
 		goto IL_00c4;
@@ -8630,8 +8630,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spawn_monster__ctor_m0C7C267BCA583FBA097
 		__this->___Curva_13 = (10.0f);
 		// public float tiempo = 360;
 		__this->___tiempo_14 = (360.0f);
-		// float cantidad = 0.5f;
-		__this->___cantidad_15 = (0.5f);
+		// float cantidad = 1f;
+		__this->___cantidad_15 = (1.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}

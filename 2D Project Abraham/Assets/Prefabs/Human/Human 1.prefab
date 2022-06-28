@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5066186802870680843}
   - component: {fileID: 2769436664547569648}
   - component: {fileID: 3777624917790221130}
+  - component: {fileID: 3695232091950417441}
   m_Layer: 0
   m_Name: Human 1
   m_TagString: Humano
@@ -123,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d0c6599d6d60a45b711b4bc71d6e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Velocidad_Movimiento: 2
+  Velocidad_Movimiento: 1.5
   Puntos_Movimiento:
   - {fileID: 8302990488795823073}
   Puntos_Movimiento2:
@@ -281,6 +282,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &3695232091950417441
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8302990488714122537}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &8302990488795823006
 GameObject:
   m_ObjectHideFlags: 0
