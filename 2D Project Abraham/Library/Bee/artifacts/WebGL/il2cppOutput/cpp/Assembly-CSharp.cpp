@@ -4254,6 +4254,8 @@ struct Spawn_monster_t5895AC4254CF5A1EF7EF8AE019BCECA292179221  : public MonoBeh
 	float ___cantidad_15;
 	// System.Single Spawn_monster::velocidadMovimiento
 	float ___velocidadMovimiento_16;
+	// System.Int32 Spawn_monster::contador
+	int32_t ___contador_17;
 };
 
 // TMPro.Examples.TMP_ExampleScript_01
@@ -6372,6 +6374,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Relog_ActualizarRelog_mFD009D3E4E07B62D7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m967AECC237535C552A97A80C7875E31B98496CA9 (int32_t* __this, String_t* ___format0, const RuntimeMethod* method) ;
 // System.String System.String::Concat(System.String,System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9B13B47FCB3DF61144D9647DDA05F527377251B0 (String_t* ___str00, String_t* ___str11, String_t* ___str22, const RuntimeMethod* method) ;
+// System.Void Relog::WinScene()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Relog_WinScene_mF8A040EEC2C2BE1DE7F8943B6F2F0AFF7E1EC840 (Relog_tAAE8275E5EE26BE7F5485A4F84B75188F1FC62B5* __this, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::GetComponent<UnityEngine.Animator>()
 inline Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* GameObject_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_mB84A0931B2081CCADE7C5D459B2A8FAA6D3D3BD3 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
 {
@@ -7891,6 +7895,27 @@ IL_0013:
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_6 = __this->___my_text_6;
 		String_t* L_7 = V_2;
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_6, L_7);
+		// if (minutos <= 0 && segundos <= 0)
+		int32_t L_8 = V_0;
+		if ((((int32_t)L_8) > ((int32_t)0)))
+		{
+			goto IL_005c;
+		}
+	}
+	{
+		int32_t L_9 = V_1;
+		if ((((int32_t)L_9) > ((int32_t)0)))
+		{
+			goto IL_005c;
+		}
+	}
+	{
+		// WinScene();
+		Relog_WinScene_mF8A040EEC2C2BE1DE7F8943B6F2F0AFF7E1EC840(__this, NULL);
+	}
+
+IL_005c:
+	{
 		// }
 		return;
 	}
@@ -7943,6 +7968,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Relog_Continuar_m1C8CE24854AC173D79A80B8
 
 IL_001b:
 	{
+		// }
+		return;
+	}
+}
+// System.Void Relog::WinScene()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Relog_WinScene_mF8A040EEC2C2BE1DE7F8943B6F2F0AFF7E1EC840 (Relog_tAAE8275E5EE26BE7F5485A4F84B75188F1FC62B5* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0E9E34245923A0BB21FDAA5FE52670E5EAD09AF1);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// SceneManager.LoadScene("Win");
+		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		SceneManager_LoadScene_m7237839058F581BFCA0A79BB96F6F931469E43CF(_stringLiteral0E9E34245923A0BB21FDAA5FE52670E5EAD09AF1, NULL);
 		// }
 		return;
 	}
@@ -8615,9 +8658,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spawn_monster_WinScene_mD7205B8F600EABA9
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		// if (contador == 0)
+		int32_t L_0 = __this->___contador_17;
+		if (L_0)
+		{
+			goto IL_0020;
+		}
+	}
+	{
 		// SceneManager.LoadScene("Win");
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		SceneManager_LoadScene_m7237839058F581BFCA0A79BB96F6F931469E43CF(_stringLiteral0E9E34245923A0BB21FDAA5FE52670E5EAD09AF1, NULL);
+		// contador++;
+		int32_t L_1 = __this->___contador_17;
+		__this->___contador_17 = ((int32_t)il2cpp_codegen_add(L_1, 1));
+	}
+
+IL_0020:
+	{
 		// }
 		return;
 	}
@@ -8626,8 +8684,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spawn_monster_WinScene_mD7205B8F600EABA9
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spawn_monster__ctor_m0C7C267BCA583FBA0977B08CFC8F329C5A3B6446 (Spawn_monster_t5895AC4254CF5A1EF7EF8AE019BCECA292179221* __this, const RuntimeMethod* method) 
 {
 	{
-		// private float Curva = 10;
-		__this->___Curva_13 = (10.0f);
+		// private float Curva = 8;
+		__this->___Curva_13 = (8.0f);
 		// public float tiempo = 360;
 		__this->___tiempo_14 = (360.0f);
 		// float cantidad = 1f;

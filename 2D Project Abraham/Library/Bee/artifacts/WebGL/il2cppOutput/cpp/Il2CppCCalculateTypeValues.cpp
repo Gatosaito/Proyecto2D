@@ -46649,6 +46649,8 @@ struct Spawn_monster_t5895AC4254CF5A1EF7EF8AE019BCECA292179221  : public MonoBeh
 	float ___cantidad_15;
 	// System.Single Spawn_monster::velocidadMovimiento
 	float ___velocidadMovimiento_16;
+	// System.Int32 Spawn_monster::contador
+	int32_t ___contador_17;
 };
 
 // TMPro.Examples.TMP_ExampleScript_01

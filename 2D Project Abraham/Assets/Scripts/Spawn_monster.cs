@@ -17,7 +17,7 @@ public class Spawn_monster : MonoBehaviour
     public float repeat_spawnrate;
 
     public float Cronometro = 0f;
-    private float Curva = 10;
+    private float Curva = 8;
     public float tiempo = 360;
 
    float cantidad = 1f;

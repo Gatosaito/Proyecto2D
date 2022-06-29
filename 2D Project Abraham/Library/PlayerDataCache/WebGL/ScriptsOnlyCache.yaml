@@ -1790,4 +1790,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Reglas.unity
   - Assets/Scenes/GameOver.unity
   - Assets/Scenes/Win.unity
-  playerPath: C:/Users/SENA/Downloads/Abraham/Dont smash the human WEBGL
+  playerPath: C:/Users/SENA/Downloads/Abraham/SmashWebGL
